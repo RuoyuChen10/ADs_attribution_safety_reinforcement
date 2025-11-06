@@ -95,7 +95,7 @@ class RunnerBase:
                     )
             else:
                 self._wrapped_model = self._model
-
+        
         return self._wrapped_model
 
     @property
@@ -109,7 +109,7 @@ class RunnerBase:
             num_parameters = 0
             for p_group in optim_params:
                 for p in p_group["params"]:
-                    print('trainable parameter shape: ', p.shape)
+                    # print('trainable parameter shape: ', p.shape)
                     num_parameters += p.data.nelement()
             logging.info("number of trainable parameters: {}".format(num_parameters))
 

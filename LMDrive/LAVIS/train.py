@@ -66,6 +66,7 @@ def get_runner_class(cfg):
     """
     Get runner class from config. Default to epoch-based runner.
     """
+    print(cfg.run_cfg.get("runner", "runner_base"))
     runner_cls = registry.get_runner_class(cfg.run_cfg.get("runner", "runner_base"))
 
     return runner_cls
